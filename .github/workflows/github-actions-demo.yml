@@ -1,6 +1,11 @@
 name: GitHub Actions Demo
+# taken from https://docs.github.com/en/actions/quickstart
+
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: #[push] #MFH: deactivate on push ; make this manually executable ; added the following line:
+  workflow_dispatch:
+  # cf. https://github.com/actions/starter-workflows/blob/main/automation/manual.yml
+  
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
