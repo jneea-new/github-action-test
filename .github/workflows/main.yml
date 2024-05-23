@@ -1,4 +1,6 @@
-on: [push]
+on: #[push]  #MFH: commented out to deactivate this script
+  workflow_dispatch: #MFH: added, to make this run manually
+  # cf. example: https://github.com/actions/starter-workflows/blob/main/automation/manual.yml
 
 jobs:
   hello_world_job:
